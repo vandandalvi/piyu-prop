@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC4A8"/><stop offset=".55" stop-color="#F27FA2"/><stop offset="1" stop-color="#9C7BE0"/></linearGradient>
+<radialGradient id="r" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="600" height="800" fill="url(#g)"/>
+<circle cx="120" cy="170" r="120" fill="#fff" opacity=".13"/>
+<circle cx="500" cy="290" r="170" fill="#fff" opacity=".1"/>
+<circle cx="290" cy="660" r="230" fill="#fff" opacity=".08"/>
+<circle cx="470" cy="110" r="10" fill="#fff" opacity=".8"/><circle cx="90" cy="420" r="7" fill="#fff" opacity=".7"/><circle cx="530" cy="560" r="8" fill="#fff" opacity=".7"/>
+<rect width="600" height="800" fill="url(#r)"/>
+<g fill="#fff" opacity=".38"><circle cx="300" cy="340" r="96"/><path d="M120 680 C 130 520 215 462 300 462 C 385 462 470 520 480 680 Z"/></g>
+<text x="300" y="96" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="32" fill="#fff" opacity=".95">her prettiest photo</text>
+</svg>

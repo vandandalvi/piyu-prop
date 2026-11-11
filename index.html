@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#FFF7EF">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="For Priyanka 💌">
+<meta property="og:description" content="Open me slowly 🐾">
+<title>For Priyanka 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Nunito:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="ambient" aria-hidden="true"></div>
+
+  <div id="night" aria-hidden="true">
+    <canvas id="sky"></canvas>
+    <div class="moon"></div>
+    <div class="roof" id="roof"></div>
+  </div>
+
+  <header id="topbar">
+    <button class="iconbtn" id="btn-back" aria-label="Go back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div id="progress" aria-hidden="true"><i class="track"></i><div class="pc" id="pc-me"></div><div class="pc" id="pc-her"></div></div>
+    <button class="iconbtn" id="btn-mute" aria-label="Sound on or off">
+      <svg class="ic-on" viewBox="0 0 24 24"><path d="M4 9h3l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="ic-off" viewBox="0 0 24 24"><path d="M4 9h3l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <!-- 1 · locked envelope -->
+  <section class="screen" id="s-lock">
+    <div class="lock-wrap">
+      <p class="kicker">sealed with a paw</p>
+      <h1 class="lock-title hand">For <span data-name></span> only</h1>
+      <div class="env-wrap">
+        <div class="envelope" id="envelope">
+          <div class="env-back"></div>
+          <div class="letter hand">You found it 💌</div>
+          <svg class="env-front" viewBox="0 0 250 168" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L125 96 L0 168 Z" fill="#F4BCC5"/><path d="M250 0 L125 96 L250 168 Z" fill="#F4BCC5"/><path d="M0 168 L125 84 L250 168 Z" fill="#F7C9D0"/></svg>
+          <div class="env-flap"></div>
+          <div class="seal" id="seal"></div>
+        </div>
+      </div>
+      <form class="lock-form" id="lock-form" autocomplete="off" novalidate>
+        <label class="lock-q" for="lock-input" id="lock-q"></label>
+        <input class="lock-input" id="lock-input" type="text" placeholder="your answer…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">
+        <p class="lock-msg" id="lock-msg" aria-live="polite"></p>
+        <button class="btn" type="submit">Open it 💌</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 2 · the note -->
+  <section class="screen" id="s-intro">
+    <div class="note" id="note">
+      <div class="note-cat" id="note-cat"></div>
+      <h2 class="note-hi hand">Hi <span data-name></span>,</h2>
+      <div class="note-lines hand" id="note-lines"></div>
+    </div>
+    <div class="hold-area">
+      <p class="ear rv" id="ear"><span class="ear-ico">🎧</span> Put your earphones on</p>
+      <div class="hold rv" id="hold-start"></div>
+      <p class="hold-label rv" id="hold-start-label">Hold the paw to begin</p>
+    </div>
+  </section>
+
+  <!-- 3 · the swipe -->
+  <section class="screen story" id="s-match">
+    <p class="kicker">01 · the swipe</p>
+    <h2 class="title">It started with a swipe.</h2>
+    <div class="stage">
+      <div class="profile" id="profile">
+        <img id="profile-img" alt="">
+        <div class="pf-grad"></div>
+        <div class="pf-info"><b id="pf-name"></b><span id="pf-bio"></span></div>
+        <div class="stamp stamp-yes">YES 💗</div>
+        <div class="stamp stamp-no">NOPE</div>
+      </div>
+      <div class="chat" id="chat"></div>
+    </div>
+    <div class="below">
+      <div class="match-controls" id="match-controls">
+        <div class="pf-actions"><button class="pf-btn no" id="pf-no" aria-label="Nope">✕</button><button class="pf-btn yes" id="pf-yes" aria-label="Yes">♥</button></div>
+        <p class="hint">Swipe right on me. Again. 🙈</p>
+      </div>
+    </div>
+    <div class="match-burst" id="match-burst">
+      <div class="its hand">It's a match!</div>
+      <div class="hi5"><i class="p-left"></i><i class="p-right"></i></div>
+    </div>
+  </section>
+
+  <!-- 4 · the day we met -->
+  <section class="screen story" id="s-meet">
+    <p class="kicker">02 · the day</p>
+    <h2 class="title">Then one day, we met.</h2>
+    <div class="stage">
+      <div class="polaroid" id="pola">
+        <div class="pola-img"><img id="pola-img" alt=""><div class="pola-film"></div><div class="pola-flash"></div></div>
+        <p class="pola-cap hand" id="pola-cap"></p>
+        <i class="tape"></i>
+      </div>
+    </div>
+    <div class="below">
+      <p class="hint" id="meet-hint">Tap the photo to develop it 📸<br><small>(or give your phone a little shake)</small></p>
+      <div class="lines" id="meet-lines"></div>
+    </div>
+  </section>
+
+  <!-- 5 · through my eyes -->
+  <section class="screen story" id="s-eyes">
+    <p class="kicker">03 · my eyes</p>
+    <h2 class="title">You keep saying you're not pretty.</h2>
+    <div class="stage">
+      <div class="eyes-frame" id="eyes-frame">
+        <img class="ef-base" alt="">
+        <img class="ef-true" alt="">
+        <div class="ef-shine"></div>
+        <div class="ef-quote hand"><span id="ef-words"></span></div>
+        <div class="ef-lens"></div>
+        <div class="ef-ghost">👆</div>
+      </div>
+    </div>
+    <div class="below">
+      <p class="hint" id="eyes-hint">Now look at yourself through my eyes.<br>Drag your finger over the photo 👀</p>
+      <div class="lines" id="eyes-lines"></div>
+    </div>
+  </section>
+
+  <!-- 6 · little things -->
+  <section class="screen story" id="s-cards">
+    <p class="kicker">04 · little things</p>
+    <h2 class="title">Things I love about you</h2>
+    <div class="stage">
+      <div class="deck" id="deck"></div>
+      <p class="deck-end hand" id="deck-end"></p>
+    </div>
+    <div class="below">
+      <p class="hint" id="cards-hint"><span id="deck-count"></span> · swipe the card</p>
+    </div>
+  </section>
+
+  <!-- 7 · my voice -->
+  <section class="screen story" id="s-voice">
+    <p class="kicker">05 · out loud</p>
+    <h2 class="title" id="voice-title"></h2>
+    <div class="stage">
+      <div class="voice-stage">
+        <div class="voice-cats" id="voice-cats"></div>
+        <div class="wave" id="wave"></div>
+        <p class="voice-note" id="voice-note"></p>
+      </div>
+    </div>
+    <div class="hold-area" id="voice-hold">
+      <div class="hold" id="hold-voice"></div>
+      <p class="hold-label">Hold the paw and listen 🎧</p>
+    </div>
+  </section>
+
+  <!-- 8 · the question -->
+  <section class="screen" id="s-question">
+    <p class="q-pre hand" id="q-pre"></p>
+    <h2 class="q-text" id="q-text"></h2>
+    <div class="q-btns" id="q-btns"><button class="btn btn-yes" id="q-yes"></button><button class="btn-no" id="q-no"></button></div>
+  </section>
+
+  <!-- 9 · yes -->
+  <section class="screen" id="s-final">
+    <div class="f-wrap">
+      <h2 class="f-title rv" id="f-title"></h2>
+      <div class="polaroid f-pola" id="f-pola"><div class="pola-img"><img id="f-img" alt=""></div><p class="pola-cap hand">you &amp; me 💗</p><i class="tape"></i></div>
+      <p class="f-line hand rv" id="f-line"></p>
+      <p class="f-sub rv" id="f-sub"></p>
+      <div class="f-actions rv" id="f-actions"><a class="btn" id="f-wa" hidden>Tell him yes 💌</a><button class="f-replay" id="f-replay">replay ↺</button></div>
+    </div>
+  </section>
+
+  <button id="next" class="next" aria-label="Next"><span class="disc"></span><span class="next-label">next</span></button>
+  <div id="toast" role="status"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+</div>
+
+<div id="guard">
+  <div class="g-card">
+    <div class="g-cat" id="g-cat"></div>
+    <h2>Made for your phone 📱</h2>
+    <p>Open this link on your phone, <span data-name></span>. It's worth it.</p>
+    <button class="btn" id="g-preview">Preview here anyway</button>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/cats.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
